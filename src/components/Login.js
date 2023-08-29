@@ -1,17 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
@@ -89,12 +75,12 @@ export default function Example() {
           </Switch.Group>
         </div>
         <div className="mt-10">
-          <button
-            type="submit"
+          <Link
             className="block w-full rounded-md bg-[#656ED3] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            to="/validator"
           >
             Login
-          </button>
+          </Link>
           <div className='flex flex-row justify-center w-full mt-3 font-medium'>Don't &nbsp;have &nbsp;account?&nbsp;          
           <Link
             className="font-bold"
