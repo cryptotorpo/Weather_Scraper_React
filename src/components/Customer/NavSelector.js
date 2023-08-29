@@ -4,12 +4,20 @@ import { Link } from 'react-router-dom';
 
 const plans = [
   {
-    name: 'Assigned Claims',
-    ram: 'Date / Location',
+    name: 'Active Claims',
+    ram: 'Balance / Total Claims',
   },
   {
-    name: 'Accessed Claims',
-    ram: 'Chart / Statistics',
+    name: 'Passive Claims',
+    ram: 'Date Registered / Status',
+  },
+  {
+    name: 'Coverages',
+    ram: 'Yearly Premium/Reimbursement',
+  },
+  {
+    name: 'Explorer',
+    ram: 'Hyperledger Explorer',
   },
 ]
 
@@ -18,8 +26,8 @@ export default function Example() {
 
   return (
     <div className="w-full px-4 py-10">
-      <div className='mb-10 text-2xl font-medium text-center text-white'>Validator</div>
-      <img src="../img/validator.png" className='w-full rounded-xl h-[220px] mb-5'></img>
+      <div className='mb-10 text-2xl font-medium text-center text-white'>Customer</div>
+      <img src="../img/customer.jpg" className='w-full rounded-xl h-[220px] mb-5'></img>
       <div className="w-full max-w-md mx-auto">
         <RadioGroup value={selected} onChange={setSelected}>
           <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>

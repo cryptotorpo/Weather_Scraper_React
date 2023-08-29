@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './table.css';
+import { FaCalendar, FaEdit } from 'react-icons/fa';
 
 function ClaimDetails () {
     return (
@@ -17,42 +18,42 @@ function ClaimDetails () {
               <td>Rain Damage</td>
               <td>Client 1</td>
               <td>2010 Random Street</td>
-              <td>Actions</td>
+              <td className='flex items-center justify-center'><FaCalendar /><FaEdit className="w-5 h-5 ml-5"/></td>
             </tr>
             <tr>
               <td>03</td>
               <td>Snow Damage</td>
               <td>Client 3</td>
               <td>2013 Random Street</td>
-              <td>Actions</td>
+              <td className='flex items-center justify-center'><FaCalendar /><FaEdit className="w-5 h-5 ml-5"/></td>
             </tr>
             <tr>
               <td>05</td>
               <td>Freeze Damage</td>
               <td>Client 7</td>
               <td>6164 Another Street</td>
-              <td>Actions</td>
+              <td className='flex items-center justify-center'><FaCalendar /><FaEdit className="w-5 h-5 ml-5"/></td>
             </tr>
             <tr>
               <td>06</td>
               <td>Freeze Damage</td>
               <td>Client 7</td>
               <td>6164 Another Street</td>
-              <td>Actions</td>
+              <td className='flex items-center justify-center'><FaCalendar /><FaEdit className="w-5 h-5 ml-5"/></td>
             </tr>
             <tr>
               <td>07</td>
               <td>Freeze Damage</td>
               <td>Client 7</td>
               <td>6164 Another Street</td>
-              <td>Actions</td>
+              <td className='flex items-center justify-center'><FaCalendar /><FaEdit className="w-5 h-5 ml-5"/></td>
             </tr>
             <tr>
               <td>08</td>
               <td>Freeze Damage</td>
               <td>Client 7</td>
               <td>6164 Another Street</td>
-              <td>Actions</td>
+              <td className='flex items-center justify-center'><FaCalendar /><FaEdit className="w-5 h-5 ml-5"/></td>
             </tr>
           </table>
         </div>

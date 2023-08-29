@@ -1,0 +1,11 @@
+tr:hover {
+    background-color: #1D2B31;
+}
+
+th, td {
+    padding: 15px;
+}
+
+.header th{
+    font-size: 17px;
+}

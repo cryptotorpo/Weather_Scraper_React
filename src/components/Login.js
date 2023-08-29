@@ -1,14 +1,22 @@
 import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Example() {
-  const [agreed, setAgreed] = useState(false)
+  const [agreed, setAgreed] = useState(false);
+  const [username, setUserName] = useState("");
+  const navigate = useNavigate();
+
+  const handleRouter = () => {
+    console.log('--------------------');
+    console.log(username);
+    navigate('/'+username, { replace: true });
+  }
 
   return (
     <div className="px-6 py-24 isolate sm:py-32 lg:px-8 w-[500px]">
@@ -26,6 +34,8 @@ export default function Example() {
                 type="text"
                 name="company"
                 id="company"
+                value={username}
+                onChange={(e) => setUserName(e.target.value)}
                 autoComplete="organization"
                 className="border border-[#656ED3] block w-full rounded-xl bg-transparent px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -75,12 +85,12 @@ export default function Example() {
           </Switch.Group>
         </div>
         <div className="mt-10">
-          <Link
+          <button
             className="block w-full rounded-md bg-[#656ED3] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            to="/validator"
+            onClick={() => handleRouter()}
           >
             Login
-          </Link>
+          </button>
           <div className='flex flex-row justify-center w-full mt-3 font-medium'>Don't &nbsp;have &nbsp;account?&nbsp;          
           <Link
             className="font-bold"
